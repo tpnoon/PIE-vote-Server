@@ -1,23 +1,23 @@
 <ion-view title="Manage Event" id="page2">
     <ion-content padding="true" class="has-header">
         <form id="manageEvent-form2" class="list">
-            <ion-item class="item-divider" id="manageEvent-list-item-divider1">Event</ion-item>
-            <label class="item item-input" id="manageEvent-input2">
+            <ion-item class="item-divider">Event</ion-item>
+            <label class="item item-input">
                 <span class="input-label">Name</span>
                 <input id = "eventName" type="text" placeholder="เช่น PIEVOTE">
             </label>
-            <label class="item item-input" id="manageEvent-input4">
+            <label class="item item-input">
                 <span class="input-label">Description</span>
                 <input id = "eventDesc" type="text" placeholder="เช่น แข่งขัน">
             </label>
             <div class="spacer" style="width: 300px; height: 23px;"></div>
-            <ion-item class="item-divider"  id="manageEvent-list-item-divider3">Team</ion-item>
+            <ion-item class="item-divider">Team</ion-item>
             <ion-list id = "teamLable" ng-repeat="name in teamList">
                 <ion-item>{{name}}</ion-item>
                 
             </ion-list>
-            <label class="item item-input" id="manageEvent-input5">
-                <span class="input-label">{{teamNumber}}</span>
+            <label class="item item-input">
+                <span class="input-label">ทีมที่ {{teamNumber}}</span>
                 <input id = "teamName" type="text" placeholder="เช่น NETPIE">
             </label>
             
@@ -25,13 +25,13 @@
                 Add Team
             </button>
         </form>
-        <form id="manageEvent-form4" class="list">
+        <form class="list">
             <ion-item class="item-divider" id="manageEvent-list-item-divider4">Timer</ion-item>
             <label class="item item-input" id="manageEvent-input7">
-                <span class="input-label">Time</span>
-                <input id = "time" type="time" placeholder="">
+                <span class="input-label">Time (MM:SS)</span>
+                <input id = "time" type="time" placeholder="" value = "10:00">
             </label>
         </form>
-        <button ng-click="submit()" class="button button-positive  button-block">Save</button>
+        <button ng-click="submit()" class="button button-positive  button-block">Done</button>
     </ion-content>
 </ion-view>
